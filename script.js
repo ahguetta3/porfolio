@@ -31,22 +31,25 @@ function type() {
 // Start typing animation
 type();
 
-// Mobile Menu Toggle
+// Mobile Navigation Toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileNavLinks = document.querySelector('.nav-links');
 
 menuToggle.addEventListener('click', () => {
     mobileNavLinks.classList.toggle('active');
-    menuToggle.querySelector('i').classList.toggle('fa-bars');
-    menuToggle.querySelector('i').classList.toggle('fa-times');
 });
 
-// Close mobile menu when clicking a link
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+    }
+});
+
+// Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
-        menuToggle.querySelector('i').classList.add('fa-bars');
-        menuToggle.querySelector('i').classList.remove('fa-times');
     });
 });
 
@@ -103,7 +106,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.5 });
 
-observer.observe(skillsSection);
+observer.observe(skillsSectionElement);
 
 // Navbar Scroll Effect
 window.addEventListener('scroll', function() {
@@ -209,7 +212,7 @@ document.querySelectorAll('.project-card').forEach(card => {
 });
 
 document.querySelectorAll('.timeline-item').forEach(item => {
-    card.classList.add('scroll-animate', 'fade-in-right');
+    item.classList.add('scroll-animate', 'fade-in-right');
 });
 
 // Skills Animation

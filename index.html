@@ -8,6 +8,72 @@
     <link rel="stylesheet" href="new_skills.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="back-to-top.css">
+    <link rel="stylesheet" href="mobile-responsive.css">
+    <style>
+        /* ... الأنماط السابقة ... */
+
+        /* تحسينات التجاوب مع الأجهزة المحمولة */
+        @media screen and (max-width: 768px) {
+            #contact {
+                padding: 40px 15px;
+            }
+
+            .contact-wrapper {
+                padding: 20px;
+                margin: 0 10px;
+            }
+
+            #contact h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .contact-box {
+                padding: 15px;
+            }
+
+            .contact-box i {
+                font-size: 32px;
+                margin-bottom: 15px;
+            }
+
+            .contact-btn {
+                padding: 12px 30px;
+                font-size: 16px;
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        /* تحسينات للشاشات الصغيرة جداً */
+        @media screen and (max-width: 480px) {
+            #contact h2 {
+                font-size: 22px;
+            }
+
+            .contact-box i {
+                font-size: 28px;
+            }
+
+            .contact-btn {
+                padding: 10px 25px;
+                font-size: 15px;
+            }
+        }
+
+        /* منع التصاق القسم بحواف الشاشة */
+        @media screen and (max-width: 320px) {
+            .contact-wrapper {
+                margin: 0 5px;
+                padding: 15px;
+            }
+
+            .contact-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -647,6 +713,29 @@
                 top: 0,
                 behavior: 'smooth'
             });
+        });
+    </script>
+    <script>
+        // التحكم في القائمة المتنقلة
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    
+        // إغلاق القائمة عند النقر على أي رابط
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    
+        // إغلاق القائمة عند النقر خارجها
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+            }
         });
     </script>
 </body>
