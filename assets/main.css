@@ -1,0 +1,18 @@
+/* Main Styles */
+@import url('styles.css');
+@import url('new_skills.css');
+@import url('skills.css');
+
+/* Font Awesome - Local */
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url('assets/webfonts/fa-solid-900.woff2') format('woff2');
+}
+
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
