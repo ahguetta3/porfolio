@@ -129,7 +129,7 @@ if (contactForm) {
 
         try {
             showLoading();
-            const response = await fetch('https://your-domain.com/api/contact', {
+            const response = await fetch('https://ahmedhaiballa.site/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
