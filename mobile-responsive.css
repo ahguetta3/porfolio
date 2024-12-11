@@ -1,0 +1,193 @@
+/* تحسينات التجاوب مع الأجهزة المحمولة */
+
+/* القائمة العلوية */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 15px 5%;
+        background: rgba(0, 0, 0, 0.95);
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .menu-toggle:hover {
+        color: var(--primary-color);
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 1000;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px;
+        width: 100%;
+        text-align: center;
+        border-radius: 8px;
+    }
+
+    .nav-links a:hover {
+        background: rgba(255, 165, 0, 0.1);
+    }
+
+    /* القسم الرئيسي */
+    .hero {
+        flex-direction: column;
+        padding: 100px 5% 50px;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-description {
+        font-size: 1em;
+        margin: 20px auto;
+    }
+
+    .social-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 350px;
+        margin: 30px auto 0;
+    }
+
+    .floating-card {
+        display: none;
+    }
+
+    /* قسم حول */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 5%;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 30px;
+    }
+
+    .about-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .stat-item {
+        width: calc(50% - 20px);
+        min-width: 140px;
+    }
+
+    /* قسم المهارات */
+    .skills-wrapper {
+        padding: 50px 5%;
+    }
+
+    .skills-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .skill-box {
+        padding: 15px;
+    }
+
+    /* قسم المشاريع */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px 5%;
+    }
+
+    .project-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* الشاشات الصغيرة */
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 12px 4%;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero-description {
+        font-size: 0.9em;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .skills-content {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-item {
+        width: 100%;
+    }
+
+    .about-image {
+        max-width: 250px;
+    }
+}
+
+/* الشاشات الصغيرة جداً */
+@media screen and (max-width: 360px) {
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .skill-box {
+        padding: 12px;
+    }
+}

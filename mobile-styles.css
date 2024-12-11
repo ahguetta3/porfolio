@@ -1,0 +1,307 @@
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    .menu-toggle {
+        display: block;
+        transition: all 0.3s ease;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .menu-toggle:hover {
+        background: rgba(255, 165, 0, 0.1);
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: rgba(0, 0, 0, 0.98);
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        transform: translateY(-10px);
+        opacity: 0;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .nav-links a {
+        padding: 15px 20px;  
+        margin: 5px 0;
+        width: 100%;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        -webkit-tap-highlight-color: transparent;  
+    }
+
+    .nav-links a:hover {
+        background: rgba(255, 165, 0, 0.1);
+        transform: translateX(5px);
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: column;
+        padding: 120px 5% 60px;
+        gap: 40px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: calc(2em + 2vw);  
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        font-size: calc(1em + 0.5vw);
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .social-links {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .btn {
+        min-height: 50px;  
+        padding: 12px 25px;
+        width: 100%;
+        max-width: 280px;
+        margin: 5px 0;
+        font-size: 1.1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* About Section */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 5%;
+        gap: 40px;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .about-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Skills Section */
+    .skills-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .skill-box {
+        padding: 20px;
+    }
+
+    /* Projects Section */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .project-card {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    /* Improved spacing for mobile */
+    .section {
+        padding: 60px 20px;
+    }
+
+    /* Better image handling */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Enhanced form elements for mobile */
+    input, textarea, select {
+        font-size: 16px;  
+        padding: 12px;
+        border-radius: 8px;
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    /* Smooth scrolling for better experience */
+    html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Contact Form Mobile Improvements */
+    .contact-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .contact-info {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    /* Make all input fields consistent in size */
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+        margin-bottom: 15px;
+        background: #fff;
+        transition: all 0.3s ease;
+    }
+
+    /* Specific styling for the message textarea */
+    .contact-form textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    /* Improve touch targets */
+    .contact-form button {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+        margin-top: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    /* Focus states for better UX */
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.1);
+        outline: none;
+    }
+
+    /* Style for the info items */
+    .contact-info .info-item {
+        padding: 15px;
+        margin-bottom: 15px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+    }
+}
+
+/* Small screens */
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-description {
+        font-size: 0.95em;
+    }
+
+    .skills-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        width: 100%;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Additional adjustments for very small screens */
+    .contact-container {
+        padding: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+
+    .contact-form button {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 360px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+
+    .about-image {
+        max-width: 250px;
+    }
+
+    .skill-box {
+        padding: 15px;
+    }
+}
